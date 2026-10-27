@@ -1,1 +1,41 @@
-temporaire
+name: La Matinale
+on:
+  schedule:
+    - cron: '45 4 * * *'
+    - cron: '45 5 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Vérifier le créneau parisien (ou lancement manuel)
+        id: time
+        env:
+          EVENT: ${{ github.event_name }}
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          import os
+          local=datetime.now(ZoneInfo('Europe/Paris'))
+          print('run='+str(os.environ['EVENT']=='workflow_dispatch' or (local.hour==5 and local.minute>=30)).lower())
+          PY
+      - name: Installer les dépendances
+        if: steps.time.outputs.run == 'true'
+        run: pip install -r requirements.txt
+      - name: Générer le journal
+        if: steps.time.outputs.run == 'true'
+        run: python generate.py
+      - name: Enregistrer l'édition
+        if: steps.time.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          git diff --cached --quiet || (git commit -m "Édition quotidienne" && git push)
