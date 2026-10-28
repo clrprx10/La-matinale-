@@ -1,16 +1,67 @@
 {
   "title": "La Matinale",
   "timezone": "Europe/Paris",
-  "target_minutes": 11,
   "max_minutes": 15,
   "sources": [
-    {"name":"Vie publique", "theme":"France", "url":"https://www.vie-publique.fr/rss.xml"},
-    {"name":"INSEE", "theme":"Économie", "url":"https://www.insee.fr/fr/information/2411675"},
-    {"name":"Banque de France", "theme":"Économie", "url":"https://www.banque-france.fr/fr/rss"},
-    {"name":"ONU Info", "theme":"International", "url":"https://news.un.org/feed/subscribe/fr/news/all/rss.xml"},
-    {"name":"France Diplomatie", "theme":"Géopolitique", "url":"https://www.diplomatie.gouv.fr/spip.php?page=backend"},
-    {"name":"Ministère de la Culture", "theme":"Culture", "url":"https://www.culture.gouv.fr/rss"},
-    {"name":"Éducation nationale", "theme":"Éducation", "url":"https://www.education.gouv.fr/rss.xml"},
-    {"name":"DEPP", "theme":"Éducation", "url":"https://www.education.gouv.fr/depp/les-notes-d-information-de-la-depp-451623"}
+    {
+      "name": "IH2EF",
+      "theme": "Éducation",
+      "url": "https://www.ih2ef.gouv.fr/actualites",
+      "type": "html"
+    },
+    {
+      "name": "Ministère de l'Éducation nationale",
+      "theme": "Éducation",
+      "url": "https://www.education.gouv.fr/toute-l-actualite",
+      "type": "html"
+    },
+    {
+      "name": "Éduscol",
+      "theme": "Éducation",
+      "url": "https://eduscol.education.gouv.fr/",
+      "type": "html"
+    },
+    {
+      "name": "DEPP",
+      "theme": "Éducation",
+      "url": "https://www.education.gouv.fr/les-notes-d-information-de-la-depp-89612",
+      "type": "html"
+    },
+    {
+      "name": "IFÉ / ENS de Lyon",
+      "theme": "Éducation",
+      "url": "https://ife.ens-lyon.fr/ife",
+      "type": "html"
+    },
+    {
+      "name": "Vie publique",
+      "theme": "France",
+      "url": "https://www.vie-publique.fr/",
+      "type": "html"
+    },
+    {
+      "name": "Banque de France",
+      "theme": "Économie",
+      "url": "https://www.banque-france.fr/",
+      "type": "html"
+    },
+    {
+      "name": "ONU Info",
+      "theme": "International",
+      "url": "https://news.un.org/fr/",
+      "type": "html"
+    },
+    {
+      "name": "France Diplomatie",
+      "theme": "Géopolitique",
+      "url": "https://www.diplomatie.gouv.fr/fr/",
+      "type": "html"
+    },
+    {
+      "name": "Ministère de la Culture",
+      "theme": "Culture",
+      "url": "https://www.culture.gouv.fr/",
+      "type": "html"
+    }
   ]
 }
