@@ -1,4 +1,4 @@
-requests
-feedparser
-beautifulsoup4
-gTTS
+requests>=2.31,<3
+beautifulsoup4>=4.12,<5
+feedparser>=6,<7
+gTTS>=2.5,<3
