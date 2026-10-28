@@ -1,41 +1,51 @@
 name: La Matinale
+
 on:
-  schedule:
-    - cron: '45 4 * * *'
-    - cron: '45 5 * * *'
   workflow_dispatch:
+  schedule:
+    - cron: '35 4,5 * * *'
+
 permissions:
   contents: write
+
+concurrency:
+  group: matinale-production
+  cancel-in-progress: false
+
 jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
       - name: Vérifier le créneau parisien (ou lancement manuel)
         id: time
         env:
-          EVENT: ${{ github.event_name }}
+          EVENT_NAME: ${{ github.event_name }}
         run: |
-          python - <<'PY' >> "$GITHUB_OUTPUT"
-          from datetime import datetime
-          from zoneinfo import ZoneInfo
-          import os
-          local=datetime.now(ZoneInfo('Europe/Paris'))
-          print('run='+str(os.environ['EVENT']=='workflow_dispatch' or (local.hour==5 and local.minute>=30)).lower())
-          PY
+          HOUR=$(TZ=Europe/Paris date +%H)
+          if [ "$EVENT_NAME" = "workflow_dispatch" ] || [ "$HOUR" = "06" ]; then
+            echo "go=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=false" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.time.outputs.go == 'true'
+      - uses: actions/setup-python@v5
+        if: steps.time.outputs.go == 'true'
+        with:
+          python-version: '3.11'
       - name: Installer les dépendances
-        if: steps.time.outputs.run == 'true'
+        if: steps.time.outputs.go == 'true'
         run: pip install -r requirements.txt
       - name: Générer le journal
-        if: steps.time.outputs.run == 'true'
+        if: steps.time.outputs.go == 'true'
         run: python generate.py
       - name: Enregistrer l'édition
-        if: steps.time.outputs.run == 'true'
+        if: steps.time.outputs.go == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/
-          git diff --cached --quiet || (git commit -m "Édition quotidienne" && git push)
+          git add docs/edition.json docs/matinale.mp3
+          if ! git diff --cached --quiet; then
+            git commit -m "Publier La Matinale"
+            git push
+          fi
