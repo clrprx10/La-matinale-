@@ -1,0 +1,42 @@
+{
+  "title": "La Matinale",
+  "date": "2026-10-28",
+  "generated_at": "2026-10-28T01:30:36.756313+01:00",
+  "audio": "matinale.mp3",
+  "transcript": "Bonjour. Voici La Matinale du 28/10/2026.\n\nCette édition est une revue de publications identifiées. Les titres, les dates et les liens figurent dans la transcription.\n\nLes informations présentées sont attribuées à leurs organismes de publication. Les titres ne constituent pas une vérification indépendante de toutes les affirmations.\n\nSujet 1. Rubrique Éducation. Source : IH2EF. Publication du 20/10/2026.\n\nPréparer les concours de personnels de direction et d’inspection : découvrez les parcours en autoformation.\n\nPrésentation publiée par la source : Conformément à ses missions d'accompagnement des transitions professionnelles des cadres du ministère de l'Éducation nationale et de la Jeunesse, l'IH2EF construit et propose des parcours numériques d’aide à la préparation aux futurs candidats des concours de personnel de direction et d’inspecteur 1\n\nSujet 2. Rubrique Éducation. Source : IH2EF. Publication du 16/10/2026.\n\nLe Film annuel, l’allié du pilotage de l’EPLE.\n\nPrésentation publiée par la source : Préparer la rentrée, organiser les examens, conduire un conseil de discipline ou assurer la liaison inter-degrés : le Film annuel des personnels de direction rassemble des repères et des ressources pour anticiper les échéances et agir au quotidien. Depuis plus de 20 ans, cet outil proposé par l’IH2E\n\nSujet 3. Rubrique International. Source : ONU Info. Publication du 27/10/2026.\n\nLes records de CO₂ pèseront sur le climat pendant des siècles.\n\nPrésentation publiée par la source : La concentration de dioxyde de carbone (CO₂) et d’autres gaz à effet de serre dans l’atmosphère, liée à la combustion des énergies fossiles, a atteint des niveaux records en 2025. Une évolution qui voue la planète à « un avenir plus chaud », a averti mardi l’agence météo des Nations Unies.\n\nSujet 4. Rubrique Culture. Source : Ministère de la Culture. Publication du 23/10/2026.\n\nPasse Culture : de nouveaux objectifs à l’horizon 2030.\n\nPrésentation publiée par la source : Le 16 octobre dernier, le passe Culture a présenté son projet stratégique 2030 en présence de la ministre de la Culture. Ce projet est le résultat d’une large concertation lancée début 2026. Tour d’horizon des axes clés.\n\nVous trouverez les références et les dates sur la page de La Matinale. À demain.",
+  "stories": [
+    {
+      "title": "Préparer les concours de personnels de direction et d’inspection : découvrez les parcours en autoformation",
+      "url": "https://www.ih2ef.gouv.fr/preparer-les-concours-de-personnels-de-direction-et-dinspection-decouvrez-les-parcours-en",
+      "date": "2026-10-20",
+      "source": "IH2EF",
+      "theme": "Éducation",
+      "summary": "Conformément à ses missions d'accompagnement des transitions professionnelles des cadres du ministère de l'Éducation nationale et de la Jeunesse, l'IH2EF construit et propose des parcours numériques d’aide à la préparation aux futurs candidats des concours de personnel de direction et d’inspecteur 1"
+    },
+    {
+      "title": "Le Film annuel, l’allié du pilotage de l’EPLE",
+      "url": "https://www.ih2ef.gouv.fr/le-film-annuel-des-reperes-pour-piloter-son-etablissement-scolaire-toute-lannee",
+      "date": "2026-10-16",
+      "source": "IH2EF",
+      "theme": "Éducation",
+      "summary": "Préparer la rentrée, organiser les examens, conduire un conseil de discipline ou assurer la liaison inter-degrés : le Film annuel des personnels de direction rassemble des repères et des ressources pour anticiper les échéances et agir au quotidien. Depuis plus de 20 ans, cet outil proposé par l’IH2E"
+    },
+    {
+      "title": "Les records de CO₂ pèseront sur le climat pendant des siècles",
+      "url": "https://news.un.org/fr/story/2026/10/1159728",
+      "date": "2026-10-27",
+      "source": "ONU Info",
+      "theme": "International",
+      "summary": "La concentration de dioxyde de carbone (CO₂) et d’autres gaz à effet de serre dans l’atmosphère, liée à la combustion des énergies fossiles, a atteint des niveaux records en 2025. Une évolution qui voue la planète à « un avenir plus chaud », a averti mardi l’agence météo des Nations Unies."
+    },
+    {
+      "title": "Passe Culture : de nouveaux objectifs à l’horizon 2030",
+      "url": "https://www.culture.gouv.fr/actualites/passe-culture-de-nouveaux-objectifs-a-l-horizon-2030",
+      "date": "2026-10-23",
+      "source": "Ministère de la Culture",
+      "theme": "Culture",
+      "summary": "Le 16 octobre dernier, le passe Culture a présenté son projet stratégique 2030 en présence de la ministre de la Culture. Ce projet est le résultat d’une large concertation lancée début 2026. Tour d’horizon des axes clés."
+    }
+  ],
+  "notice": "Revue de titres et de présentations attribuées aux sources. Pas une synthèse journalistique indépendante."
+}
